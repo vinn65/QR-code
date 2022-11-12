@@ -1,7 +1,9 @@
 package main
 
 import {
-	
+	"io/ioutil"	
+	"log"
+	"github.com/skip2/grc"
 }
 func main(){
 	a, err := os.Open("abcd.txt")
@@ -20,6 +22,8 @@ func main(){
 
 	err = qrcode.WriteFile(abc, qrcode.Medium, 512, newQR)
 
-	if err != 
+	if err != nil{
+		log.Fatal(err)
+	}
 
 }
