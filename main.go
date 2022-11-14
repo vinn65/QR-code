@@ -3,7 +3,7 @@ package main
 import {
 	"io/ioutil"	
 	"log"
-	"github.com/skip2/grc"
+	"github.com/skip2/go-grc"
 }
 func main(){
 	a, err := os.Open("abcd.txt")
