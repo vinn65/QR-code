@@ -1,14 +1,15 @@
 package main
 
-import {
-	"io/ioutil"	
+import (
+	"io/ioutil"
+	"os"
 	"log"
-	"github.com/skip2/go-grc"
-}
+	"github.com/skip2/go-qrcode"
+)
 func main(){
 	a, err := os.Open("abcd.txt")
 	if err != nil{
-		log.fatal(err)
+		log.Fatal(err)
 	}
 	defer a.Close()
 
@@ -18,7 +19,7 @@ func main(){
 	}
 
 	abc := string(b)
-	newQR := "abcd-qr.png"
+	newQR := "abcd.png"
 
 	err = qrcode.WriteFile(abc, qrcode.Medium, 512, newQR)
 
